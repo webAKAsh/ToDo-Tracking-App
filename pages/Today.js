@@ -34,11 +34,11 @@ export default function Today({ data1, data2 }) {
   }
 
   return (
-  <section className="text-gray-600 body-font">
+  <section className="text-gray-600 body-font h-full">
     <div className="container px-5 py-12 mx-auto flex flex-wrap">
       <div className="flex flex-wrap w-full">
         <div className="p-2 lg:w-1/2 md:w-full">
-          <h2 className='text-xl font-semibold mb-2 text-center text-amber-300'>Remaining ToDos</h2>
+          <h2 className='text-xl font-semibold mb-2 text-center text-amber-300'>Remaining ToDos - {data1.length}</h2>
           {
             data1.map((todos,i) => (
               <div className="flex border-2 my-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col" key={i}>
@@ -54,7 +54,7 @@ export default function Today({ data1, data2 }) {
           }
         </div>
         <div className="p-2 lg:w-1/2 md:w-full">
-          <h2 className='text-xl font-semibold mb-2 text-center text-emerald-400'>Completed ToDos</h2>
+          <h2 className='text-xl font-semibold mb-2 text-center text-emerald-400'>Completed ToDos - {data2.length}</h2>
           {
             data2.map((completed,i) => (
               <div className="flex border-2 my-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col" key={i}>

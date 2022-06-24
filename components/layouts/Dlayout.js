@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link";
 
 const Dlayout = ({children}) => {
+
     const todoNavigation = [
         {
             href:"/Today",title:"Today"
@@ -20,9 +21,9 @@ const Dlayout = ({children}) => {
         },
     ]
   return (
-    <div className='grid grid-cols-4'>
-        <aside className="w-full h-full" aria-label="Sidebar">
-            <div className="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
+    <div className='grid grid-cols-4 h-screen'>
+        <aside className="w-full h-screen" aria-label="Sidebar">
+            <div className="overflow-y-auto h-full py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
                 <ul className="space-y-2">
                 <Link href="/Newtask">
                     <li>
@@ -148,7 +149,7 @@ const Dlayout = ({children}) => {
                 </ul>
             </div>
         </aside>
-        <main className='col-span-3'>{children}</main>
+        <main className='col-span-3 h-screen'>{children}</main>
     </div>
   )
 }
