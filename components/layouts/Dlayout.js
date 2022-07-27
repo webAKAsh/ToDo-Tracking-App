@@ -21,8 +21,8 @@ const Dlayout = ({children}) => {
         },
     ]
   return (
-    <div className='grid grid-cols-4 h-screen'>
-        <aside className="w-full h-screen" aria-label="Sidebar">
+    <div className='grid grid-cols-12 sm:grid-cols-4 h-screen'>
+        <aside className="w-full col-span-5 sm:col-span-1" aria-label="Sidebar">
             <div className="overflow-y-auto h-full py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
                 <ul className="space-y-2">
                 <Link href="/Newtask">
@@ -149,7 +149,7 @@ const Dlayout = ({children}) => {
                 </ul>
             </div>
         </aside>
-        <main className='col-span-3 h-screen'>{children}</main>
+        <main className='sm:col-span-3'>{children}</main>
     </div>
   )
 }
